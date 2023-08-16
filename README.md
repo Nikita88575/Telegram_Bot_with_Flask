@@ -93,7 +93,7 @@ source .venv/bin/activate
 ```
 pip3 install -r requirements.txt
 ```
-6) Запускаємо бота:
+6) Запускаємо додаток:
 ```
 python3 app.py
 ```
