@@ -1,0 +1,8 @@
+pytz
+gino
+aiogram
+asyncio
+asyncpg
+pilmoji
+python-dotenv
+sqlalchemy==1.3

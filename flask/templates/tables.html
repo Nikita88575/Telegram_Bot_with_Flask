@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tables</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="tables-container">
+        <h1 id="tables-title">Tables</h1>
+        <div class="tables-list-container">
+            {% for table in tables %}
+                <p>
+                    <a class="tables_list" href="{{ url_for('table_details', table_name=table) }}">{{ table }}</a>
+                </p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

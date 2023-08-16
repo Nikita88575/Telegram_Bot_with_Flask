@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ table_name }} Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="db-table-container">
+        <table class="db-table">
+            <thead>
+                <th id="db-table-name">
+                    {{ table_name }}
+                </th>
+                <tr>
+                    {% for column in table_columns %}
+                        <th id="db-column-name">
+                            {{ column.name }}
+                        </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table_data %}
+                    <tr>
+                        {% for value in row %}
+                            <td id="db-table-value">
+                                {{ value }}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
