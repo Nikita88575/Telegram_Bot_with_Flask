@@ -36,7 +36,7 @@
 <h1>Лінк на лендінг: <a href='https://nikita88575.github.io/my_projects.html'>Лендінг</a></h1>
 <h1>Лінк на телеграм бота: <a href='https://t.me/chat_auxiliary_bot'>Бот</a></h1>
 <h1>Лінк на Backend телеграм бота: <a href='https://github.com/Nikita88575/Telegram_Bot_with_Flask/tree/main/telegram_bot'>Backend телеграм бота</a></h1>
-<h1>Запустити телеграм бота можна наступним чином:</h1> 
+<h1>Запуск телеграм бота:</h1> 
 
 ## <p>Linux:</p>
 
@@ -55,11 +55,9 @@ psql
 CREATE DATABASE database_name;
 \q
 ```
-
-3) Переходимо директорію telegram_bot в та створюємо файл .env на основі .env.example
+3) Переходимо директорію data в та створюємо файл .env на основі .env.example
 
 2) Створюємо virtualenv:
-
 ```
 python3 -m venv .venv
 ```
@@ -67,13 +65,35 @@ python3 -m venv .venv
 ```
 source .venv/bin/activate
 ```
-
 4) Встановлюємо необхідні модулі:
 ```
 pip3 install -r requirements.txt
 ```
-
 5) Запускаємо бота:
+```
+python3 app.py
+```
+
+<h1>Доповненням до бота є flask aplication задача якого полягає у перегладі даних в БД</h1>
+<h1>Запуск додатку:</h1>
+
+1) Переходимо директорію flask
+
+2) Переходимо директорію data в та створюємо файл .env на основі .env.example
+
+3) Створюємо virtualenv:
+```
+python3 -m venv .venv
+```
+4) Активуємо virtualenv:
+```
+source .venv/bin/activate
+```
+5) Встановлюємо необхідні модулі:
+```
+pip3 install -r requirements.txt
+```
+6) Запускаємо бота:
 ```
 python3 app.py
 ```
