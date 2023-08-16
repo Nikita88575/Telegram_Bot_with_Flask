@@ -71,7 +71,7 @@ pip3 install -r requirements.txt
 ```
 5) Запускаємо бота:
 ```
-python3 app.py
+.venv/bin/python3 app.py
 ```
 
 <h1>Доповненням до бота є flask aplication задача якого полягає у перегладі даних в БД</h1>
@@ -95,5 +95,5 @@ pip3 install -r requirements.txt
 ```
 6) Запускаємо додаток:
 ```
-python3 app.py
+.venv/bin/python3 app.py
 ```
