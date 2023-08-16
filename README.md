@@ -36,11 +36,24 @@
 <h1>Лінк на лендінг: <a href='https://nikita88575.github.io/my_projects.html'>Лендінг</a></h1>
 <h1>Лінк на телеграм бота: <a href='https://t.me/chat_auxiliary_bot'>Бот</a></h1>
 <h1>Лінк на Backend телеграм бота: <a href='https://github.com/Nikita88575/Telegram_Bot_with_Flask/tree/main/telegram_bot'>Backend телеграм бота</a></h1>
-<h1>Запустити телеграм бота можна наступним чином:</h1> #<p>Linux:</p>
-    1) Ствооюємо файл .env на основі .env.example
-    2) Створюємо virtualenv в директорії telegram_bot:
-        ...
-        python3 -m venv .virtualenv
-        ...
-    3) 
-    
+<h1>Запустити телеграм бота можна наступним чином:</h1> <p>#Linux:</p>
+1) Створюємо файл .env на основі .env.example
+2) Створюємо virtualenv у директорії telegram_bot:
+
+```
+python3 -m venv .venv
+```
+3) Активуємо virtualenv:
+```
+source .venv/bin/activate
+```
+
+4) Встановлюємо необхідні модулі:
+```
+pip3 install -r requirements.txt
+```
+
+5) Запускаємо бота:
+```
+python3 app.py
+```
