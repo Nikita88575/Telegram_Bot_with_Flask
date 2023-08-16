@@ -5,4 +5,4 @@ asyncio
 asyncpg
 pilmoji
 python-dotenv
-sqlalchemy==1.3
+sqlalchemy==1.4.49

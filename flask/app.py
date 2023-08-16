@@ -99,4 +99,4 @@ def table_details(table_name):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(debug=DEBUG, host='0.0.0.0')
+    app.run(debug=DEBUG, host=FLASK_HOST)
