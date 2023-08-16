@@ -26,35 +26,35 @@ def require_authentication():
 def index():
     return redirect(url_for('login'))
 
-# @app.route('/registration', methods=['GET', 'POST'])
-# def registration():
-#     if request.method == 'POST':
-#         username = request.form['username']
-#         password = request.form['password']
+@app.route('/registration', methods=['GET', 'POST'])
+def registration():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
 
-#         # Check if the username is already taken
-#         existing_user = User.query.filter_by(username=str(username)).first()
-#         if existing_user:
-#             flash('Username already exists', 'error')
-#             return redirect(url_for('registration'))
+        # Check if the username is already taken
+        existing_user = User.query.filter_by(username=str(username)).first()
+        if existing_user:
+            flash('Username already exists', 'error')
+            return redirect(url_for('registration'))
 
-#         # Create a new user and set the password
-#         new_user = User(username=str(username))
-#         new_user.set_password(str(password))
+        # Create a new user and set the password
+        new_user = User(username=str(username))
+        new_user.set_password(str(password))
 
-#         # Trying add user to DB
-#         try:
-#             db.session.add(new_user)
-#             db.session.commit()
-#             flash('Registration successful', 'success')
-#             session['authenticated'] = True
-#             return redirect(url_for('tables'))
-#         except Exception as e:
-#             db.session.rollback()
-#             flash('Registration failed', 'error')
-#             return redirect(url_for('registration'))
+        # Trying add user to DB
+        try:
+            db.session.add(new_user)
+            db.session.commit()
+            flash('Registration successful', 'success')
+            session['authenticated'] = True
+            return redirect(url_for('tables'))
+        except Exception as e:
+            db.session.rollback()
+            flash('Registration failed', 'error')
+            return redirect(url_for('registration'))
 
-#     return render_template('registration.html')
+    return render_template('registration.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
