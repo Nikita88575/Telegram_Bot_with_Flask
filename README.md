@@ -40,9 +40,25 @@
 
 ## <p>Linux:</p>
 
-1) Створюємо файл .env на основі .env.example
+1) Створюємо роль з паролем для бд:
 
-2) Створюємо virtualenv у директорії telegram_bot:
+```
+sudo su postgres
+createuser username -P --interactive
+```
+Робимо нову роль суперкористувачем.
+
+2) Створюємо БД та виходимо з psql:
+
+```
+psql
+CREATE DATABASE database_name;
+\q
+```
+
+3) Переходимо директорію telegram_bot в та створюємо файл .env на основі .env.example
+
+2) Створюємо virtualenv:
 
 ```
 python3 -m venv .venv
