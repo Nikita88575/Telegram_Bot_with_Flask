@@ -55,7 +55,7 @@ psql
 CREATE DATABASE database_name;
 \q
 ```
-3) Переходимо директорію data в та створюємо файл .env на основі .env.example
+3) Переходимо в директорію data та створюємо файл .env на основі .env.example
 
 2) Створюємо virtualenv:
 ```
